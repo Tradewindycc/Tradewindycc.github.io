@@ -19,4 +19,42 @@ function openModal(modalId) {
       }
     }
   }
+
+  function openFullScreenGif() {
+    const newWindow = window.open("", "_blank");
+  
+    newWindow.document.write(`
+      <html>
+        <head>
+          <style>
+            body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              background-color: black;
+              color: white;
+              font-family: Arial, sans-serif;
+            }
+            img {
+              max-width: 100%;
+              max-height: 90%;
+            }
+            p {
+              margin-top: 10px;
+              font-size: 18px;
+            }
+          </style>
+        </head>
+        <body>
+          <img src="images/cat_kiss.gif" alt="Full Screen GIF">
+          <p>Well, kiss from kitty for you. Have a nice day!</p>
+        </body>
+      </html>
+    `);
+  }
   
