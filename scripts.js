@@ -1,14 +1,17 @@
 // Function to open modal
 function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-  }
-  
-  // Function to close modal
-  function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "none";
-  }
+  var modal = document.getElementById(modalId);
+  modal.style.opacity = 0;
+  modal.style.display = "block";
+  setTimeout(() => { modal.style.opacity = 1; }, 10); // Smoothly fades in
+}
+
+function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.opacity = 0;
+  setTimeout(() => { modal.style.display = "none"; }, 300); // Smoothly fades out
+}
+
   
   // Close modal if clicked outside of the modal content
   window.onclick = function(event) {
