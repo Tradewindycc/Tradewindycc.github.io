@@ -191,3 +191,41 @@ video {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* 让页面在移动端更友好 */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  /* 让表格自适应屏幕 */
+  table {
+      width: 100% !important;
+      max-width: 100% !important;
+  }
+
+  /* 让单元格变成块级元素，方便自适应 */
+  td {
+      display: block;
+      width: 100% !important;
+      text-align: center;
+  }
+
+  /* 调整图片和视频尺寸，避免溢出 */
+  img, video {
+      max-width: 100%;
+      height: auto;
+  }
+
+  /* 让名字居中 */
+  .name {
+      font-size: 24px;
+      text-align: center;
+  }
+
+  /* 让侧边栏（头像）居中 */
+  td[style*="width:25%"] {
+      text-align: center;
+  }
+}
